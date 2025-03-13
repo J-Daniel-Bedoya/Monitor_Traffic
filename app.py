@@ -67,4 +67,5 @@ def delete_file(filename):
         return str(e), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5080, debug=True)
+    port = int(os.environ.get('PORT', 5080))
+    app.run(host='0.0.0.0', port=port)
